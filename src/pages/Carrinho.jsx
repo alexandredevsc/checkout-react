@@ -3,6 +3,7 @@ import ResumoCompra from "../components/ResumoCompra.jsx";
 import { produtos } from "../data/produtos.js";
 import { calcularTotalCentavos } from "../utils/carrinho.js";
 import "./Carrinho.css";
+import { Link } from "react-router-dom";
 
 /* Reúne os dados e os componentes da página do carrinho. */
 function Carrinho() {
@@ -31,10 +32,16 @@ function Carrinho() {
           ))}
         </ul>
 
-        <ResumoCompra
-          totalCentavos={totalCentavos}
-          quantidadeItens={quantidadeItens}
-        />
+        <div className="carrinho-resumo">
+          <ResumoCompra
+            totalCentavos={totalCentavos}
+            quantidadeItens={quantidadeItens}
+          />
+
+          <Link className="botao-primario" to="/pagamento">
+            Finalizar compra
+          </Link>
+        </div>
       </div>
     </>
   );
