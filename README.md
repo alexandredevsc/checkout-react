@@ -120,6 +120,9 @@ Branches utilizadas:
 - `feature/rotas-checkout`
 - `feature/pagamento`
 - `feature/revisao-entrega`
+- `feature/ajustes-finais`
+- `feature/links-entrega`
+- `feature/correcao-readme`
 
 A develop concentra a integração. A main é destinada à entrega final.
 
@@ -162,7 +165,7 @@ do escopo implementado.
 
 ## Vídeo de apresentação
 
-Pendente de gravação e inclusão do link antes da entrega.
+[Assista à apresentação da Órbita Tech no YouTube](https://youtu.be/9yVgmmz5YuE)
 
 ## Investigação com debugger
 
@@ -189,11 +192,11 @@ Ao retomar a execução, a aplicação navegou para /falha e exibiu
 A investigação confirmou a identificação dos dígitos repetidos,
 a remoção dos separadores e a navegação para o resultado de falha.
 
-![Investigação da regra de pagamento no DevTools](docs/debugger-pagamento.  png)
+![Investigação da regra de pagamento no DevTools](docs/debugger-pagamento.png)
+
 
 ## Links do projeto
 
 - [Código-fonte no GitHub](https://github.com/alexandredevsc/checkout-react)
 - [Planejamento no Trello](https://trello.com/b/gh12JKpj/checkout-react-projeto-sctec)
 - [Vídeo de apresentação no YouTube](https://youtu.be/9yVgmmz5YuE)
-
