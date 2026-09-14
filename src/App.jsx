@@ -1,4 +1,5 @@
 import "./App.css";
+import Carrinho from "./pages/Carrinho.jsx";
 
 // Estrutura inicial da Loja; as páginas de checkout serão adicionadas por etapas.
 function App() {
@@ -17,17 +18,9 @@ function App() {
         <span className="aviso-simulacao">Ambiente de demonstração</span>
       </header>
 
-      {/* Conteúdo principal da página do carrinho. */}
+      {/* Exibe a página do carrinho dentro do layout compartilhado. */}
       <main className="conteudo">
-        <section className="introducao" aria-labelledby="titulo-carrinho">
-          <p className="etiqueta">SEU PRÓXIMO UPGRADE</p>
-
-          <h1 id="titulo-carrinho">Seu carrinho</h1>
-
-          <p className="descricao">
-            Confira os acessórios escolhidos para o seu dia a dia.
-          </p>
-        </section>
+        <Carrinho />
       </main>
 
       {/* Esclarece que o projeto não realiza cobranças. */}
