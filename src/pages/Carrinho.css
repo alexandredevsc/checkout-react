@@ -1,0 +1,118 @@
+/* Organiza produtos e resumo em uma coluna nas telas pequenas. */
+.carrinho-layout {
+    display: grid;
+    gap: 24px;
+    margin-top: 32px;
+    align-items: start;
+}
+
+.lista-produtos {
+    display: grid;
+    gap: 16px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    min-width: 0;
+}
+
+/* Aplica superfície, bordas e profundidade aos cartões. */
+.item-carrinho,
+.resumo-compra {
+    padding: 24px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 20px;
+    background: linear-gradient(145deg,
+            var(--cor-superficie),
+            var(--cor-fundo));
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+}
+
+.item-carrinho-nome,
+.resumo-compra h2 {
+    font-size: 1.125rem;
+    overflow-wrap: anywhere;
+}
+
+/* Distribui os dados sem impor larguras que ultrapassem a tela. */
+.item-carrinho-dados {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin: 20px 0 0;
+}
+
+.item-carrinho-dados dt,
+.resumo-valores dt {
+    color: var(--cor-texto-secundario);
+    font-size: 0.875rem;
+}
+
+.item-carrinho-dados dd,
+.resumo-valores dd {
+    margin: 4px 0 0;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+.item-carrinho-dados>div:last-child dd {
+    color: var(--cor-destaque);
+}
+
+/* Destaca o valor final e separa a mensagem de demonstração. */
+.resumo-valores {
+    display: grid;
+    gap: 20px;
+    margin: 24px 0;
+}
+
+.resumo-valores>div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 8px 16px;
+}
+
+.resumo-total {
+    color: var(--cor-destaque);
+    font-size: 1.5rem;
+}
+
+.resumo-aviso {
+    padding-top: 16px;
+    border-top: 1px solid var(--cor-borda);
+    color: var(--cor-texto-secundario);
+    font-size: 0.875rem;
+}
+
+/* Exibe preço, quantidade e subtotal lado a lado quando houver espaço. */
+@media (min-width: 480px) {
+    .item-carrinho-dados {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+/* Posiciona o resumo ao lado da lista em telas maiores. */
+@media (min-width: 960px) {
+    .carrinho-layout {
+        grid-template-columns: minmax(0, 1fr) 320px;
+    }
+}
+
+/* Reserva a mesma altura para todas as fotos, sem cortar os produtos. */
+.item-carrinho-imagem {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  background-color: #f4f6f5;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+/* Distribui os produtos em duas colunas quando há espaço disponível. */
+@media (min-width: 640px) {
+  .lista-produtos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
