@@ -1,3 +1,10 @@
+/* Inclui padding e bordas na largura de todos os elementos. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 /* Identidade visual: superfícies claras e destaque em verde-petróleo. */
 :root {
   --cor-fundo: #f4f6f5;
