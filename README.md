@@ -189,5 +189,11 @@ Ao retomar a execução, a aplicação navegou para /falha e exibiu
 A investigação confirmou a identificação dos dígitos repetidos,
 a remoção dos separadores e a navegação para o resultado de falha.
 
-![Investigação da regra de pagamento no DevTools](docs/debugger-pagamento.png)
+![Investigação da regra de pagamento no DevTools](docs/debugger-pagamento.  png)
+
+## Links do projeto
+
+- [Código-fonte no GitHub](https://github.com/alexandredevsc/checkout-react)
+- [Planejamento no Trello](https://trello.com/b/gh12JKpj/checkout-react-projeto-sctec)
+- [Vídeo de apresentação no YouTube](https://youtu.be/9yVgmmz5YuE)
 
