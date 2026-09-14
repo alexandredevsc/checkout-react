@@ -8,6 +8,17 @@ function ItemCarrinho({ produto }) {
 
   return (
     <li className="item-carrinho">
+
+      {/* Apresenta a imagem ilustrativa correspondente ao produto. */}
+      <img
+        className="item-carrinho-imagem"
+        src={produto.imagem}
+        alt={`Imagem ilustrativa de ${produto.nome}.`}
+        width="480"
+        height="480"
+        loading="lazy"
+      />
+      
       {/*Identifica o produto dentro da lista do carrinho.*/}
       <h2 className="item-carrinho-nome">{produto.nome}</h2>
 
